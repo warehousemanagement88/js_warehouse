@@ -4,7 +4,7 @@ const checkTokenAndRedirect = () => {
   // Mendapatkan nilai cookie dengan nama "token" menggunakan fungsi getCookie
   const token = getCookie("token");
 
-  // Jika tidak ada token, kembalikan ke halaman signIn.html
+  // Jika tidak ada token, kembalikan ke halaman sign-in.html
   if (!token) {
     Swal.fire({
       icon: "info",
@@ -13,7 +13,7 @@ const checkTokenAndRedirect = () => {
       confirmButtonText: "OK",
     }).then(() => {
       // Redirect ke halaman sign in
-      window.location.href = "../signIn.html";
+      window.location.href = "../../sign-in.html";
     });
   }
 };

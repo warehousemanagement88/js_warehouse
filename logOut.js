@@ -10,12 +10,12 @@ const logout = () => {
   }).then((result) => {
     if (result.isConfirmed) {
       localStorage.removeItem("previousPageURL");
-      localStorage.removeItem("magangData");
+      localStorage.removeItem("gudangaData, gudangbData, gudangcData");
       // Menghapus token dari cookie
       document.cookie =
         "Authorization= ; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
       // Redirect ke halaman sign-in.html
-      window.location.href = "../signIn.html";
+      window.location.href = "../../sign-in.html";
     }
   });
 };

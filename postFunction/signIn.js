@@ -22,7 +22,7 @@ function postWithToken(target_url, datajson, responseFunction) {
 
 const PostSignIn = () => {
   const target_url =
-    "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-login";
+    "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_login";
   const datainjson = {
     email: getValue("email"),
     password: getValue("password"),
@@ -42,12 +42,10 @@ const responseData = (result) => {
       text: "You have successfully logged in.",
     }).then(() => {
       // Redirect based on the user role
-      if (result.role === "mahasiswa") {
-        window.location.href = "./mahasiswa/index.html";
-      } else if (result.role === "mitra") {
-        window.location.href = "./mitra/index.html";
+      if (result.role === "staff") {
+        window.location.href = "./pages/dashboard.html";
       } else if (result.role === "admin") {
-        window.location.href = "./admin/index.html";
+        window.location.href = "./pages/dashboard.html";
       } else {
         // Handle other roles or scenarios if needed
         // For example, redirect to a default page or show an error message

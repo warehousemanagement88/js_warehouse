@@ -1,6 +1,6 @@
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 
-function postSignUpMahasiswa(target_url, datajson, responseFunction) {
+function postSignUpStaff(target_url, datajson, responseFunction) {
   var raw = JSON.stringify(datajson);
 
   var requestOptions = {
@@ -15,25 +15,23 @@ function postSignUpMahasiswa(target_url, datajson, responseFunction) {
     .catch((error) => console.log("error", error));
 }
 
-const SignUpMahasiswa = () => {
+const SignUpStaff = () => {
   const target_url =
-    "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-signup-mahasiswa";
+    "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_signup";
 
   const datainjson = {
     namalengkap: getValue("namalengkap"),
-    tanggallahir: getValue("tanggallahir"),
+    jabatan: getValue("jabatan"), // Assuming there's a field for staff position
     jeniskelamin: getValue("jeniskelamin"),
-    nim: getValue("nim"),
-    perguruantinggi: getValue("perguruantinggi"),
-    prodi: getValue("prodi"),
     akun: {
       email: getValue("email"),
       password: getValue("password"),
       confirmpass: getValue("confirmpass"),
     },
   };
+
   console.log(datainjson);
-  postSignUpMahasiswa(target_url, datainjson, responseData);
+  postSignUpStaff(target_url, datainjson, responseData);
 };
 
 const responseData = (result) => {
@@ -54,4 +52,4 @@ const responseData = (result) => {
   }
 };
 
-window.SignUpMahasiswa = SignUpMahasiswa;
+window.SignUpStaff = SignUpStaff;
