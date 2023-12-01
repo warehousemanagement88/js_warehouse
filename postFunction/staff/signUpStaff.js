@@ -38,7 +38,7 @@ const responseData = (result) => {
   if (result.status) {
     Swal.fire({
       icon: "success",
-      title: "Sign Up Successful",
+      title: "Create Account Successful",
       text: result.message,
     }).then(() => {
       window.location.href = "../admin/dashboard.html";
@@ -46,7 +46,7 @@ const responseData = (result) => {
   } else {
     Swal.fire({
       icon: "error",
-      title: "Sign Up Failed",
+      title: "Create Account Failed",
       text: result.message,
     });
   }
