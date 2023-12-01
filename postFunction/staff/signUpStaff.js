@@ -41,7 +41,7 @@ const responseData = (result) => {
       title: "Sign Up Successful",
       text: result.message,
     }).then(() => {
-      window.location.href = "../signIn.html";
+      window.location.href = "../admin/dashboard.html";
     });
   } else {
     Swal.fire({
