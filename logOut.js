@@ -3,7 +3,7 @@ const logout = () => {
   Swal.fire({
     icon: "question",
     title: "Konfirmasi",
-    text: "Apakah Anda yakin ingin logout?",
+    text: "Apakah Anda yakin ingin logout ?",
     showCancelButton: true,
     confirmButtonText: "Logout",
     cancelButtonText: "Batal",
