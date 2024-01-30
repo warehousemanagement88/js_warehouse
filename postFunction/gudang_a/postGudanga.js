@@ -2,18 +2,25 @@ import { postWithToken } from "https://jscroot.github.io/api/croot.js";
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
-const PostMagang = () => {
+const postGudangA = () => {
   const target_url =
-    "https://asia-southeast2-bursakerja-project.cloudfunctions.net/intermoni-magang";
+    "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_gudanga";
   const tokenvalue = getCookie("Authorization");
   const tokenkey = "Authorization";
   const datainjson = {
-    posisi: getValue("posisi"),
-    lokasi: getValue("lokasi"),
-    deskripsimagang: document.getElementById("deskripsimagang").innerHTML,
-    infotambahanmagang: document.getElementById("infotambahanmagang").innerHTML,
-    expired: getValue("expired"),
+    brand: getValue("brand"), // Replace with the appropriate field names
+    name: getValue("name"),
+    category: getValue("category"),
+    qty: getValue("qty"),
+    sku: getValue("sku"),
+    sellingprice: getValue("sellingprice"),
+    originalprice: getValue("originalprice"),
+    availability: getValue("availability"),
+    color: getValue("color"),
+    breadcrumbs: getValue("breadcrumbs"),
+    date: new Date(), // You may need to adjust this based on your backend expectations
   };
+
   postWithToken(target_url, tokenkey, tokenvalue, datainjson, responseData);
   console.log(datainjson);
 };
@@ -36,4 +43,4 @@ const responseData = (result) => {
   }
 };
 
-window.PostMagang = PostMagang;
+window.postGudangA = postGudangA;
