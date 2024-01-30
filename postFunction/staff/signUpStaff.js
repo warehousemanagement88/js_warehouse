@@ -23,6 +23,7 @@ const SignUpStaff = () => {
     namalengkap: getValue("namalengkap"),
     jabatan: getValue("jabatan"), // Assuming there's a field for staff position
     jeniskelamin: getValue("jeniskelamin"),
+    nohp: getValue("nohp"),
     akun: {
       email: getValue("email"),
       password: getValue("password"),
