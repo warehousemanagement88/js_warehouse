@@ -13,6 +13,9 @@ class="mx-auto mt-6 mb-6 p-4 max-w-md bg-gradient-to-tl from-purple-700 to-pink-
       <strong>Nama Lengkap : #NAMALENGKAP#</strong>
     </p>
     <p class="mb-2">
+      <strong>No HP : #NOHP#</strong>
+    </p>
+    <p class="mb-2">
       <strong>Jabatan : #JABATAN#</strong>
     </p>
     <p class="mb-2">
@@ -37,6 +40,7 @@ export function responseDataStaff(results) {
 export function isiRowStaff(value) {
   const content = dataStaff
     .replace("#NAMALENGKAP#", value.namalengkap)
+    .replace("#NOHP#", value.nohp)
     .replace("#JABATAN#", value.jabatan)
     .replace("#JENISKELAMIN#", value.jeniskelamin);
   addInner("detailStaff", content);
