@@ -42,7 +42,7 @@ const responseData = (result) => {
       title: "Create Account Successful",
       text: result.message,
     }).then(() => {
-      window.location.href = "../admin/dashboard.html";
+      window.location.href = "../admin/file/dashboard.html";
     });
   } else {
     Swal.fire({
