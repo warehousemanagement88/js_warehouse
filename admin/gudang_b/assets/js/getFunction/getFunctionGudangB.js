@@ -45,9 +45,9 @@ export const tableGudangB = `
   <span class="text-xs font-semibold leading-tight text-slate-400">#DATE#</span>
 </td>
 <td class="p-2 align-middle bg-transparent border-b whitespace-nowrap shadow-transparent text-center">
-  <a type="button" href="edit_gudang_b.html?gudangbId=#EDIT#" class="text-xs font-semibold leading-tight text-slate-400"> <i class="fas fa-edit"></i></a>
-  <button onclick="deleteGudangB('#DELETE#')" class="text-xs font-semibold leading-tight text-slate-400">
-  <i class="fas fa-trash-alt"></i>
+  <a type="button" href="detail_gudang.html?name=#DETAIL#" class="text-xs font-semibold leading-tight text-slate-400"> <i class="fas fa-info-circle"></i></a>
+  <a type="button" href="edit_gudang_b.html?gudangaId=#EDIT#" class="text-xs font-semibold leading-tight text-slate-400"> <i class="fas fa-edit"></i></a>
+  <button onclick="deleteGudangB('#DELETE#')" class="text-xs font-semibold leading-tight text-slate-400"><i class="fas fa-trash-alt"></i></button>
 </button>
 </td>
 </tr>
