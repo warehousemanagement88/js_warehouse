@@ -73,6 +73,7 @@ export function isiRow(value) {
     .replace("#BRAND#", value.brand)
     .replace("#DATE#", wibCreated)
     .replace("#EDIT#", value._id)
-    .replace("#DELETE#", value._id);
+    .replace("#DELETE#", value._id)
+    .replace("#DETAIL#", value.name);
   addInner("tableGudangC", gudangc);
 }
