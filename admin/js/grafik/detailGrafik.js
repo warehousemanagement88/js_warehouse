@@ -14,7 +14,6 @@ function show_chart(target_url, idChart, backgroundColor) {
   })
     .then((response) => response.json())
     .then((result) => {
-      // Check if result is an array
       if (Array.isArray(result)) {
         const temps = result;
 
